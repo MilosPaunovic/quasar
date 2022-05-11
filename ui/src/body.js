@@ -3,6 +3,7 @@ import { noop } from './utils/event.js'
 import { onKeyDownComposition } from './utils/private/key-composition.js'
 import { isRuntimeSsrPreHydration, client, iosCorrection } from './plugins/Platform.js'
 
+
 function getMobilePlatform (is) {
   if (is.ios === true) return 'ios'
   if (is.android === true) return 'android'
