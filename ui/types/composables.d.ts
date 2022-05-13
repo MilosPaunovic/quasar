@@ -6,6 +6,7 @@ import { Ref } from "vue";
 import { QVueGlobals } from "./globals";
 
 interface useDialogPluginComponent {
+  
   <T = any>(): {
     dialogRef: Ref<QDialog | undefined>;
     onDialogHide: () => void;
