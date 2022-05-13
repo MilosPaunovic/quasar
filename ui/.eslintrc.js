@@ -5,6 +5,7 @@ module.exports = {
     ecmaVersion: '2021' // Allows for the parsing of modern ECMAScript features
   },
 
+  
   env: {
     browser: true,
     mocha: true
