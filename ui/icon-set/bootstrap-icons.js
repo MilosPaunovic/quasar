@@ -6,6 +6,7 @@
 /* There are some icons that are needed but not available
    so we import them from MDI as svg */
 
+
 const {
   mdiFormatSubscript,
   mdiFormatSuperscript
