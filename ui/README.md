@@ -2,6 +2,7 @@
 
 # Quasar Framework UI Package
 
+
 > Build high-performance VueJS user interfaces in record time: responsive Single Page Apps, SSR Apps, PWAs, Browser extensions, Hybrid Mobile Apps and Electron Apps. If you want, all using the same codebase!
 
 <img src="https://img.shields.io/npm/v/quasar?label=quasar">
