@@ -12,6 +12,7 @@ jobs:
       - name: Adding markdown
         uses: actions/github-script@v5
         env:
+          GITHUB_STEP_SUMMARY: $GITHUB_STEP_SUMMARY
           TEST: |
             aaa @${{ github.event.issue.user.login }}! 👋
 
@@ -24,4 +25,4 @@ jobs:
 
             Thank you for your collaboration. 👏
         with: 
-          script: process.env.TEST >> $GITHUB_STEP_SUMMARY
+          script: process.env.TEST >> process.env.GITHUB_STEP_SUMMARY
