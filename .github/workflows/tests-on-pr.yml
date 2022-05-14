@@ -38,7 +38,14 @@ jobs:
         run: cd ./ui && npm i
       
       - name: Run tests
-        run: cd ./ui/dev && cypress run-ct --record --key ${{ secrets.CYPRESS_RECORD_KEY }} && cd ..
+        uses: cypress-io/github-action@v2
+        with:
+          record: true
+          command: npm run test:component:ci
+          working-directory: ui
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }} # Dashboard record key as an environment variable
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # To allow accurately detecting a build vs a re-run build
       
       - name: Add workflow summary
         run: echo "$INTRO" >> $GITHUB_STEP_SUMMARY
