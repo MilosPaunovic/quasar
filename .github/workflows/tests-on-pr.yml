@@ -6,8 +6,8 @@ jobs:
   Tests:
     runs-on: ubuntu-latest
 
-    name: 'Cypress tests'
+    name: 'UI tests'
     steps:
 
       - name: Adding markdown
-        run: echo '### Hello world! :rocket:\n\n#### Another heading' >> $GITHUB_STEP_SUMMARY
+        run: echo '### Hello world! :rocket:/\n/\n#### Another heading' >> $GITHUB_STEP_SUMMARY
