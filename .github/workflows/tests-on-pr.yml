@@ -10,7 +10,4 @@ jobs:
     steps:
 
       - name: Adding markdown
-        run: |
-          ### Hello world! :rocket:
-          #### Another heading 
-          >> $GITHUB_STEP_SUMMARY
+        run: echo '### Hello world! :rocket:\n\n#### Another heading' >> $GITHUB_STEP_SUMMARY
