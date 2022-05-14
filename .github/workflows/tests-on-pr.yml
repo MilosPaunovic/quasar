@@ -25,4 +25,4 @@ jobs:
 
             Thank you for your collaboration. 👏
         with: 
-          script: process.env.TEST >> process.env.GITHUB_STEP_SUMMARY
+          script: echo process.env
