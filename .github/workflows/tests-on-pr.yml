@@ -10,7 +10,7 @@ jobs:
     steps:
 
       - name: Adding markdown
-        run: echo ${{ env.TEST }} >> $GITHUB_STEP_SUMMARY
+        run: ${{ env.TEST }} >> $GITHUB_STEP_SUMMARY
         env:
           TEST: |
             aaa @${{ github.event.issue.user.login }}! 👋
