@@ -8,10 +8,13 @@ jobs:
     strategy:
       fail-fast: false
 
-    name: 'Running Cypress tests'
+    name: 'Cypress tests'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Adding markdown
-        run: echo '### Hello world! :rocket:' >> $GITHUB_STEP_SUMMARY
+        run: |
+        echo '### Hello world! :rocket:\
+        #### Another heading' 
+        >> $GITHUB_STEP_SUMMARY
