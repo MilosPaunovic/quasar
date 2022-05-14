@@ -5,6 +5,7 @@ module.exports = {
         '@quasar/babel-preset-app'
       ]
     },
+    
 
     production: {
       presets: [ 'es2015-rollup' ],
