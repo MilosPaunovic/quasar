@@ -9,8 +9,9 @@ jobs:
       SUMMARY: |
         Hi @${{ github.event.pull_request.user.login }}! 👋
 
-        It looks like you've opened a [PR#${{github.event.pull_request.number}}](https://github.com/quasarframework/quasar/pull/${{github.event.pull_request.number}}).
-        We've detected file changes inside the UI folder, so that triggered our Cypress component tests. Results could be seen below.
+        It looks like you've opened a pull request #[${{github.event.pull_request.number}}](https://github.com/quasarframework/quasar/pull/${{github.event.pull_request.number}}).
+        
+        We've detected file changes inside the `UI` folder, so that triggered our Cypress component tests. Results could be seen below.
 
         Thank you for your contribution. 👏
 
