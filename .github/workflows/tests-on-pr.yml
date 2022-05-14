@@ -1,12 +1,6 @@
 name: UI Tests
 
-on:
-  pull_request:
-    types: [opened, edited, synchronize ]
-    branches:    
-      - 'dev'
-    paths:
-      - 'ui/**'
+on: push
 
 jobs:
   Tests:
@@ -41,10 +35,10 @@ jobs:
           node-version: 14
       
       - name: Install dependencies
-        run: cd ./ui && npm i
+        run: cd ./ui && npm i && cd ./dev
       
       - name: Run tests
-        run: echo ls -lf && cd ./dev && cypress run-ct --record --key ${{ secrets.CYPRESS_RECORD_KEY }} && cd ..
+        run: cypress run-ct --record --key ${{ secrets.CYPRESS_RECORD_KEY }} && cd ..
       
       - name: Add workflow summary
         run: echo "$INTRO" >> $GITHUB_STEP_SUMMARY
