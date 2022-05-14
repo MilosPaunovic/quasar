@@ -22,4 +22,4 @@ jobs:
             Without a proper reproduction, your issue will have to get closed.
 
             Thank you for your collaboration. 👏
-        run: echo process.env.TEST >> $GITHUB_STEP_SUMMARY
+        run: echo ${{ process.env.TEST }} >> $GITHUB_STEP_SUMMARY
