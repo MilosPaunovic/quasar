@@ -48,11 +48,14 @@ jobs:
       - name: Run tests
         run: cd ./ui && npm run test:component:ci
       
-      - name: Adding failure markdown
+      - name: Adding summary markdown
           run: echo "$INTRO" >> $GITHUB_STEP_SUMMARY
-          if: failure()
+
           run: echo "$FAILURE" >> $GITHUB_STEP_SUMMARY
-          if: success()
+          if: failure()
+
           run: echo "$SUCCESS" >> $GITHUB_STEP_SUMMARY
-          run:
-            echo "$THANKS" >> $GITHUB_STEP_SUMMARY
+          if: success()
+
+          run: echo "$THANKS" >> $GITHUB_STEP_SUMMARY
+          if: always()
