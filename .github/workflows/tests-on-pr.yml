@@ -2,11 +2,9 @@ name: UI Tests
 
 on:
   pull_request:
-    types:
-      - opened
+    types: [opened, edited, synchronize ]
     branches:    
       - 'dev'
-      - 'AutomatingTests'
     paths:
       - 'ui/**'
 
@@ -34,7 +32,7 @@ jobs:
 
     name: 'UI tests'
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup node
@@ -48,7 +46,7 @@ jobs:
       - name: Run tests
         run: cd ./ui && npm run test:component:ci
       
-      - name: Adding workflow summary
+      - name: Add workflow summary
         run: echo "$INTRO" >> $GITHUB_STEP_SUMMARY
           
       - run: echo "$FAILURE" >> $GITHUB_STEP_SUMMARY
