@@ -10,4 +10,12 @@ jobs:
     steps:
 
       - name: Adding markdown
-        run: echo '### Hello world! :rocket:/\n/\n#### Another heading' >> $GITHUB_STEP_SUMMARY
+      - uses: actions/github-script@v5       
+        with:
+          script: |
+            const markdown = `aaa
+            aaa
+            ddd
+            dd`
+
+            echo markdown >> $GITHUB_STEP_SUMMARY
