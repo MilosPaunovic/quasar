@@ -1,26 +1,22 @@
 name: UI Tests
 
-on: push
+on: pull_request
 
 jobs:
   Tests:
     runs-on: ubuntu-latest
     env:
-      TEST: |
-        aaa @${{ github.event.issue.user.login }}! 👋
+      SUMMARY: |
+        Hi @${{ github.event.pull_request.user.login }}! 👋
 
-        aaa provided an invalid or unsupported reproduction URL.
-        Do not use any service other than [Codepen](https://codepen.io), [jsFiddle](https://jsfiddle.net), [Codesandbox](https://codesandbox.io), and [GitHub](https://github.com).
-        Make sure the URL you provided is correct and reachable. You can test it by visiting it in a private tab, another device, etc.
-        Please **edit your original post above** and provide a valid reproduction URL as explained.
+        It looks like you've opened a [PR#${{github.event.pull_request.number}}](https://github.com/quasarframework/quasar/pull/${{github.event.pull_request.number}}).
+        We've detected file changes inside the UI folder, so that triggered our Cypress component tests. Results could be seen below.
 
-        Without a proper reproduction, your issue will have to get closed.
-
-        Thank you for your collaboration. 👏 
+        Thank you for your contribution. 👏
 
     name: 'UI tests'
     steps:
 
       - name: Adding markdown
-        run: echo "$TEST" >> $GITHUB_STEP_SUMMARY
+        run: echo "$SUMMARY" >> $GITHUB_STEP_SUMMARY
 
