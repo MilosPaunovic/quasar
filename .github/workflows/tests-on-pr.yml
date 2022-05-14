@@ -10,6 +10,7 @@ jobs:
     steps:
 
       - name: Adding markdown
+        run: echo ${{ env.TEST }} >> $GITHUB_STEP_SUMMARY
         env:
           TEST: |
             aaa @${{ github.event.issue.user.login }}! 👋
@@ -22,4 +23,3 @@ jobs:
             Without a proper reproduction, your issue will have to get closed.
 
             Thank you for your collaboration. 👏
-        run: echo ${{ process.env.TEST }} >> $GITHUB_STEP_SUMMARY
