@@ -23,4 +23,5 @@ jobs:
             Without a proper reproduction, your issue will have to get closed.
 
             Thank you for your collaboration. 👏
-        script: process.env.TEST >> $GITHUB_STEP_SUMMARY
+        with: 
+          script: process.env.TEST >> $GITHUB_STEP_SUMMARY
