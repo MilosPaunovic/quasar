@@ -44,7 +44,7 @@ jobs:
         run: cd ./ui && npm i
       
       - name: Run tests
-        run: echo ls -ls && cd ./dev && cypress run-ct --record --key ${{ secrets.CYPRESS_RECORD_KEY }} && cd ..
+        run: echo ls -lf && cd ./dev && cypress run-ct --record --key ${{ secrets.CYPRESS_RECORD_KEY }} && cd ..
       
       - name: Add workflow summary
         run: echo "$INTRO" >> $GITHUB_STEP_SUMMARY
