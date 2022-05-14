@@ -11,7 +11,8 @@ jobs:
 
       - name: Adding markdown
         run: |
-          foo="##Hello :rocket:\
-          \
-          #### something in other line \"
+          foo="
+          ##Hello :rocket: \
+          #### something in other line \
+          "
           echo foo >> $GITHUB_STEP_SUMMARY
