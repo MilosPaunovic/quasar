@@ -10,12 +10,6 @@ jobs:
     steps:
 
       - name: Adding markdown
-        uses: actions/github-script@v5       
-        with:
-          script: |
-            const markdown = `aaa
-            aaa
-            ddd
-            dd`
-
-            echo markdown >> $GITHUB_STEP_SUMMARY
+        run: |
+          $foo = "Hello :rocket:";
+          echo $foo >> $GITHUB_STEP_SUMMARY
