@@ -1,4 +1,4 @@
-![Quasar Framework logo](https://cdn.quasar.dev/logo-v2/header.png)
+![Quasar Framework logo](https://cdn.quasar.dev/logo-v2/header.png)1
 
 # Quasar Framework
 
